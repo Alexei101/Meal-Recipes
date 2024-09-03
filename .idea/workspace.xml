@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="526ba9ce-8a3a-4071-b97c-9a8e0332463e" name="Changes" comment="Meal Recipes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="526ba9ce-8a3a-4071-b97c-9a8e0332463e" name="Changes" comment="Translation of the recipe to rus" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,11 +105,20 @@
       <option name="project" value="LOCAL" />
       <updated>1725359678907</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Translation of the recipe to rus">
+      <option name="closed" value="true" />
+      <created>1725370935439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725370935439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Meal Recipes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meal Recipes" />
+    <MESSAGE value="Translation of the recipe to rus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Translation of the recipe to rus" />
   </component>
 </project>

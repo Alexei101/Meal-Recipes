@@ -1,6 +1,6 @@
 
 import requests
-import json
+
 from tkinter import *
 
 #from Tools.demo.spreadsheet import translate
@@ -39,7 +39,7 @@ if __name__ == '__main__':
         frame,
         text="Get Recipe",
         font=("Helvetica", 12),
-        command=lambda: printRecipe()
+        command=lambda: print_recipe()
     )
 
 
@@ -47,11 +47,11 @@ if __name__ == '__main__':
         frame,
         text="Translate",
         font=("Helvetica", 12),
-        command=lambda: translateRecipeToRus()
+        command=lambda: translate_recipe_to_rus()
     )
     buttonTranslate.pack(side = "right", padx = 20)
     button.pack(side="right", pady = 20)
-    def printRecipe():
+    def print_recipe():
         view.delete(1.0, END)
         response = requests.get("https://www.themealdb.com/api/json/v1/1/random.php")
         ans = response.json()
@@ -62,7 +62,7 @@ if __name__ == '__main__':
         label.config(text=ans['meals'][0]['strMeal'])
 
 
-    def translateRecipeToRus():
+    def translate_recipe_to_rus():
         v = view.get(1.0, END)
         view.delete(1.0, END)
         translator = Translator()
