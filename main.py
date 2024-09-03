@@ -3,6 +3,8 @@ import requests
 import json
 from tkinter import *
 
+#from Tools.demo.spreadsheet import translate
+from googletrans import Translator
 
 if __name__ == '__main__':
 
@@ -32,6 +34,7 @@ if __name__ == '__main__':
     )
     #view.grid(row=4, column=4)
     view.pack(padx = 10, pady = 10)
+
     button = Button(
         frame,
         text="Get Recipe",
@@ -39,16 +42,32 @@ if __name__ == '__main__':
         command=lambda: printRecipe()
     )
 
-    button.pack(pady = 20)
 
+    buttonTranslate = Button (
+        frame,
+        text="Translate",
+        font=("Helvetica", 12),
+        command=lambda: translateRecipeToRus()
+    )
+    buttonTranslate.pack(side = "right", padx = 20)
+    button.pack(side="right", pady = 20)
     def printRecipe():
         view.delete(1.0, END)
         response = requests.get("https://www.themealdb.com/api/json/v1/1/random.php")
         ans = response.json()
         recipe_instructions = ans['meals'][0]['strInstructions']
-        print(recipe_instructions)
+
+        #print(recipe_instructions)
         view.insert(END, recipe_instructions)
         label.config(text=ans['meals'][0]['strMeal'])
+
+
+    def translateRecipeToRus():
+        v = view.get(1.0, END)
+        view.delete(1.0, END)
+        translator = Translator()
+        translated_instructions = translator.translate(v, dest='ru').text
+        view.insert(END, translated_instructions)
 
 
     Tk.mainloop(frame)
